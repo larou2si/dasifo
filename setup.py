@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 setuptools.setup(
     name='dasifo',
-    version='0.0.1',
+    version='0.0.2',
     author="larou2si",
     author_email="mohamed.laroussi.1@esprit.tn",
     description="This new Library is 'DAta Science In Full Options = dasifo': ...",
@@ -20,9 +20,12 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires='>=3.7',
-    install_requires=['numpy', 'scrapeasy'],
+    install_requires=['numpy', 'scrapeasy', 'mysql-connector-python', 'psycopg2', 'postgis'],
 )
 
 # to install this package in your python envirement:
-# python3 setup.py sdist bdist_wheel
-# pip3 install -e .
+#       python3 setup.py sdist bdist_wheel
+#       pip3 install -e .
+# to upload your LIB to pypi
+#       python setup.py sdist
+#       twine upload dist/*
